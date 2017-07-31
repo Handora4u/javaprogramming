@@ -1,0 +1,14 @@
+
+public class ForDemo {
+
+	public static void main(String[] args) {
+		//求1-100的累加和是1+2+3+4+...1000=5050
+		int sum = 0;
+		for(int num = 1; num <=100; num++) {
+			sum+=num;//sum=sum+num;
+		}
+		System.out.println("sum="+sum);
+
+	}
+
+}
