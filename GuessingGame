@@ -1,0 +1,63 @@
+import java.util.Scanner;
+public class GuessingGame{
+public static void main(String[]args){
+int count = 0;
+char [] input = null;
+int result = new int [2];
+Scanner scan = new Scanner(System.in);
+System.out.println("GuessingGame>欢迎尝试猜字母游戏!")'
+char [] chs = generate();
+Syste.out.println("GuessingGame>游戏开始,请输入您要猜的五个字母序列:exit--退出");
+while (true){
+string inputStr = Scanner.next().trim().toUpperCase();
+if ("exit".equals(inputStr)){
+System.out.println("GuessingGame>谢谢你的尝试，再见!");
+break;
+}
+input = inputStr.toCharArray();
+result = check(chs,input);
+if(result[0]==chs.length){
+int score = 100*chs.length-count*10;
+System.out.println("恭喜你猜对了!你的得分是:"+score);
+break;
+}else{
+count++;
+System.out.println("GuessingGame>你猜对"+result[1]+"个字符"+result[0]+"个字符的位置正确!(总次数="+count+",exit--退出)"
+}
+}
+Scanner.close();
+}
+public static char generate(){
+char [] letters = {"A","B","C","D","E","F","G"."H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"};
+boolean flags [] = new boolean[letters.length];
+char chs = new char[5];
+for (int i=0; i<chs.length;i++){
+int index;
+do{
+indext = (int)(Math.random()*(letter.length));
+}while(flags[indext]);
+chs [i]= letters[index];
+flags[index]=ture;
+}
+return chs;
+}
+public static int [] check(char[]chs; char[]input){
+int result = new int[2];
+for (i=0; i<input.length;i++){
+for(j=0;j<chs.length;j++){
+if(input[i]==chs[j]){
+result [1] ++;
+for (i==j){
+result[0]++;
+}
+break;
+}
+}
+}
+return result;
+}
+
+}
+
+
+
